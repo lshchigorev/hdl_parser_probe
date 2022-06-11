@@ -1,1 +1,7 @@
-counter_tb.v ../units/counter.v
+../uart/UartStates.vh
+../uart/Uart8.v
+../uart/BaudRateGenerator.v
+../uart/Uart8Receiver.v
+../uart/Uart8Transmitter.v
+../uart/BaudRateGenerator.v
+../testbench/Uart8_tb.v
