@@ -1,0 +1,1 @@
+counter_tb.v ../units/counter.v
