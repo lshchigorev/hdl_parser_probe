@@ -1,0 +1,2 @@
+../units/counter.v
+../testbench/counter_tb.v 
