@@ -15,7 +15,7 @@ module counter_tb;
   always #5 clk = !clk;
 
   wire [7:0] value;
-  counter dut (value, clk, reset);
+  counter dut (value, clk, reset, flag);
 
   initial
      $monitor("At time %t, value = %h (%0d)",
