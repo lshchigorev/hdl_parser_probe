@@ -3,7 +3,9 @@ module counter(cnt_o, clk, reset, flag);
   parameter WIDTH = 8;
 
   output reg [WIDTH-1 : 0] cnt_o;
-  input 	       clk  , reset;   
+  input  clk1, clk2, reset;
+  input wire      a;
+  input  [31:0] data_in;
   //input               reset; //input
   //input
   /*
