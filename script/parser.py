@@ -14,18 +14,31 @@ debug = 1
 input_cnt = 0
 inout_cnt = 0
 output_cnt = 0
-str_input = "input"
-str_inout = "inout"
-str_output = "output"
+wire_cnt = 0
+reg_cnt = 0
+param_cnt = 0
+always_cnt = 0
+assign_cnt = 0
 
-#input_cnt, inout_cnt, output_cnt = functions.PortCnt(file_name, debug)
-input_cnt = functions.PortCnt(file_name, str_input, debug)
-inout_cnt = functions.PortCnt(file_name, str_inout, debug)
-output_cnt = functions.PortCnt(file_name, str_output, debug)
+always_cnt = functions.PortCnt(file_name, "always", debug)
+input_cnt = functions.PortCnt(file_name, "input", debug)
+inout_cnt = functions.PortCnt(file_name, "inout", debug)
+output_cnt = functions.PortCnt(file_name, "output", debug)
+wire_cnt = functions.PortCnt(file_name, "wire", debug)
+reg_cnt = functions.PortCnt(file_name, "reg", debug)
+param_cnt = functions.PortCnt(file_name, "parameter", debug)
+assign_cnt = functions.PortCnt(file_name, "assign", debug)
+
+
 
 print(input_cnt, " Input(s) in file")
 print(inout_cnt, " Inout(s) in file")
 print(output_cnt, " Output(s) in file")
+print(wire_cnt, " Wire(s) in file")
+print(reg_cnt, " Reg(s) in file")
+print(param_cnt, " Parameter(s) in file")
+print(always_cnt, " always statement(s) in file")
+print(assign_cnt, " assign statement(s) in file")
 
 
 

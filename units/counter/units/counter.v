@@ -16,7 +16,8 @@ module counter(cnt_o, clk, reset, flag);
   output flag;
 
   reg [WIDTH-1 : 0]   out;
-  wire 	       clk, reset;
+  //wire 	       clk, reset;
+  wire 	       new_wire;
 
   always @(posedge clk or posedge reset)
     if (reset)
