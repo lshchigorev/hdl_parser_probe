@@ -2,10 +2,11 @@ module counter(cnt_o, clk, reset, flag);
 
   parameter WIDTH = 8;
 
-  output reg [WIDTH-1:0] cnt_o;
-  input  clk1, clk2, reset;
+  output reg [ WIDTH - 1 : 0] cnt_o;
+  //output reg [21:0] cnt_o;
+  //input  clk1, clk2, reset;
   input wire      a;
-  input reg [31:0] data_in;
+  input reg [ 31:0] data_in;
   //input               reset; //input
   //input
   /*

@@ -13,7 +13,8 @@ def PortCnt(file_name, target, debug):
         #reg_exp_match = '(^\s*){}(\s+)(?P<type>wire|reg)?(\s*)(?P<width>\[\w*[:]\w*\](\s*))?((?P<few_names>\w+(\s*)[,](\s*))*)(\s*)(?P<last_name>\w+(\s*))([;])'.format(target)
         
         #width group doesn't sensitiive to param
-        reg_exp_match = '(^\s*){}(\s+)(?P<type>wire|reg)?(\s*)(?P<width>\[\w*[+|-|*]?\w*[:]\w*\](\s*))?(\s*)((?P<few_names>\w+(\s*)[,](\s*))*)(?P<last_name>\w+(\s*))([;])'.format(target)
+        #reg_exp_match = '(^\s*){}(\s+)(?P<type>wire|reg)?(\s*)(?P<width>\[\w*[+|-|*|/]?\w*[:]\w*\](\s*))?(\s*)((?P<few_names>\w+(\s*)[,](\s*))*)(?P<last_name>\w+(\s*))([;])'.format(target)
+        reg_exp_match = '(^\s*){}(\s+)(?P<type>wire|reg)?(\s*)(?P<width>(\[\s*\w*\s*[\+|\-|\*|\/]?\s*\w*\s*?[:]\s*\w*\s*[\+|\-|\*|\/]?\s*\w*\s*?\]))?(\s*)(?P<last_name>\w+(\s*))([;])'.format(target)
         match = re.search(reg_exp_match, row)
         #match = re.findall(reg_exp_match, row)
         reg_exp_one_str_comment = '(^\s*)(//)(.*)'
