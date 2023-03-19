@@ -7,7 +7,7 @@
 How to start: ./parser.py <path_to_hdl>
 Default HDL:  ../units/counter/units/counter.v
 
-# Release 0.1
+# Version 0.01
 # 14.06.2022
 # definitely not supported:
  - instanes;
